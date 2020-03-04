@@ -34,20 +34,6 @@ class Scoreboard extends Component {
     });
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.userName && this.state.highScore) {
-      API.saveBook({
-        userName: this.state.userName,
-        highScore: this.state.highScore
-      })
-        .then(res => this.loadScores())
-        .catch(err => console.log(err));
-    }
-  };
-
   render() {
     return (
       <Container fluid>
