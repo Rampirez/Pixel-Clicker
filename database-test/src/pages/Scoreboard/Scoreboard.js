@@ -62,7 +62,10 @@ class Scoreboard extends Component {
                 })}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>Current Scoreboard
+                <p>User-1</p>
+                <p>123 points</p>
+              </h3>
             )}
           </Col>
         </Row>
