@@ -66,7 +66,7 @@ class Scoreboard extends Component {
                 {this.state.scoreTable.map(score => {
                   return (
                     <ListItem key={score._id}>
-                      <a href={"/books/" + score._id}>
+                      <a href={"/highscores/" + score._id}>
                         <strong>
                           {score.userName} - {score.highScore}
                         </strong>
