@@ -1,12 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import logo from "./logo.svg";
+import Login from "./components/Login";
+import Nav from "./components/Nav";
+import LoginPage from "./pages/LoginPage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
