@@ -9,7 +9,7 @@ export function Login() {
     
 
     <div className="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      <img src="https://piskel-imgstore-b.appspot.com/img/f86d1082-5f00-11ea-95bd-2b8516267d01.gif" id="icon" alt="User Icon" />
     </div>
 
     
