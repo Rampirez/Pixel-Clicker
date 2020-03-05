@@ -7,6 +7,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
+        
         <Sky
           images={{
             /* FORMAT AS FOLLOWS */
@@ -15,7 +16,7 @@ class LoginPage extends Component {
             2: "https://i.dlpng.com/static/png/6462980_preview.png",
             3: "https://www.pngkit.com/png/full/661-6613192_freetoedit-cute-kawaii-pixel-pastel-rose-jfashion-png.png",
             4: "https://lh3.googleusercontent.com/proxy/jnkxJilt9T_p5C08cVJdSwXPTzo7R2SsbabkLDmPienVuGwum01NvihH7CfCKBJK8tcohkfF1LsmaCsWMFJbjAPGPg",
-            5: "https://25.media.tumblr.com/a9a32e3a1110245055adf31838a1c0f4/tumblr_mtsqeujax01rni86yo1_500.gif",
+            5: "https://25.media.tumblr.com/a9a32e3a1110245055adf31838a1c0f4/tumblr_mtsqeujax01rni86yo1_500.gif"
           }}
           how={
             160
@@ -25,6 +26,12 @@ class LoginPage extends Component {
           background={"palettedvioletred"} /* color of background */
         />
         <Login />
+        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" autoPlay='true'>
+          <p>
+            If you are reading this, it is because your browser does not support
+            the audio element.{" "}
+          </p>
+        </audio>
       </div>
     );
   }
