@@ -11,12 +11,12 @@ class LoginPage extends Component {
         <Sky
           images={{
             /* FORMAT AS FOLLOWS */
-            0: "https://cdn1.iconfinder.com/data/icons/miscellaneous-43/48/ghost-512.png" /* You can pass as many images as you want */,
-            1: "https://lh3.googleusercontent.com/proxy/sllv6MMqAXvqT0OQBewhoY0nDGIRktJPlDMjhBpWAJdtuizIqj-ny4V7fB4imZL7YljySjMw-jq-Un49Nyd5Qm3vQaHV-LzyOiIMpKFOAGmbCsX70Dl3Sw",
-            2: "https://i.dlpng.com/static/png/6462980_preview.png",
+            0: "https://cdn.pixabay.com/photo/2016/03/31/20/40/baby-1295959_960_720.png" /* You can pass as many images as you want */,
+            1: "https://cdn.discordapp.com/attachments/628743072334872630/685276679303987254/Flower336.png",
+            2: "https://cdn.discordapp.com/attachments/628743072334872630/685276641139621896/Cherry336.gif",
             3: "https://www.pngkit.com/png/full/661-6613192_freetoedit-cute-kawaii-pixel-pastel-rose-jfashion-png.png",
-            4: "https://lh3.googleusercontent.com/proxy/jnkxJilt9T_p5C08cVJdSwXPTzo7R2SsbabkLDmPienVuGwum01NvihH7CfCKBJK8tcohkfF1LsmaCsWMFJbjAPGPg",
-            5: "https://25.media.tumblr.com/a9a32e3a1110245055adf31838a1c0f4/tumblr_mtsqeujax01rni86yo1_500.gif"
+            4: "https://cdn.discordapp.com/attachments/628743072334872630/685276601503842324/Heart336.gif",
+            5: "https://cdn.discordapp.com/attachments/628743072334872630/685276641139621896/Cherry336.gif"
           }}
           how={
             160
