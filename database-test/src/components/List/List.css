@@ -1,6 +1,6 @@
 .list-overflow-container {
     max-height: 545px;
-    border: 1px #FFCAD4 solid;
+    border: 1px peachpuff solid;
     border-radius: 4px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -21,7 +21,7 @@
   }
   
   .list-overflow-container li a {
-    color: #494368;
+    color: aquamarine;
   }
   
   .list-overflow-container li:first-child {
