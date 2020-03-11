@@ -3,6 +3,9 @@
 // =============================================================
 var express = require("express");
 
+const mongoose = require("mongoose");
+const routes = require("./routes");
+
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -17,6 +20,17 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+// Add routes, both API and view
+app.use(routes);
+
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/pixelclicker"
+);
 
 // Routes
 // =============================================================

@@ -59,14 +59,14 @@ $(document).ready(function() {
         waifuThing.append(alertDiv);
       }
 
-      function handleDeleteButtonPress() {
-        let listItemData = $(this).parent("td").parent("tr").data("waifu");
-        let id = listItemData.id;
-        $.ajax({
-          method: "DELETE",
-          url: "/api/waifus/" + id
-        })
-          .then(getWaifu);
-      }
+      // function handleDeleteButtonPress() {
+      //   let listItemData = $(this).parent("td").parent("tr").data("waifu");
+      //   let id = listItemData.id;
+      //   $.ajax({
+      //     method: "DELETE",
+      //     url: "/api/waifus/" + id
+      //   })
+      //     .then(getWaifu);
+      // }
 
 });

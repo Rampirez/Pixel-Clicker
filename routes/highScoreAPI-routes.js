@@ -1,24 +1,41 @@
-var db = require("../models");
+const router = require("express").Router();
+const scoreController = require("../../controllers/scoreController");
 
-module.exports = function(app) {
+// Matches with "/api/scores"
+router.route("/")
+  .get(scoreController.findAll)
+  .post(scoreController.create);
 
-    app.get("/api/highscores", function(req, res) {
-        db.HighScore.findAll({
-          include: [db.Post]
-        }).then(function(dbHighScore) {
-          res.json(dbHighScore);
-        });
-      });
+// Matches with "/api/books/:id"
+router
+  .route("/:id")
+  .get(scoreController.findById)
+  .put(scoreController.update)
+  .delete(scoreController.remove);
 
-      app.get("/api/highscores/:id", function(req, res) {
-        db.HighScore.findOne({
-          where: {
-            id: req.params.id
-          },
-          include: [db.Post]
-        }).then(function(dbHighScore) {
-          res.json(dbHighScore);
-        });
-      });
+module.exports = router;
 
-}
+// var db = require("../models");
+
+// module.exports = function(app) {
+
+//     app.get("/api/highscores", function(req, res) {
+//         db.HighScore.findAll({
+//           include: [db.Post]
+//         }).then(function(dbHighScore) {
+//           res.json(dbHighScore);
+//         });
+//       });
+
+//       app.get("/api/highscores/:id", function(req, res) {
+//         db.HighScore.findOne({
+//           where: {
+//             id: req.params.id
+//           },
+//           include: [db.Post]
+//         }).then(function(dbHighScore) {
+//           res.json(dbHighScore);
+//         });
+//       });
+
+// }

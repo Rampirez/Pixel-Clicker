@@ -3,7 +3,7 @@ $(document).ready(function() {
     let userName = $("User");
     let hiScore = $("High-Score");
 
-    $(document).on("click", ".delete-user", handleDeleteButtonPress);
+    // $(document).on("click", ".delete-user", handleDeleteButtonPress);
 
     getUsers();
 
@@ -62,14 +62,14 @@ $(document).ready(function() {
         userName.append(alertDiv);
       }
 
-      function handleDeleteButtonPress() {
-        let listItemData = $(this).parent("td").parent("tr").data("user");
-        let id = listItemData.id;
-        $.ajax({
-          method: "DELETE",
-          url: "/api/highscores/" + id
-        })
-          .then(getUsers);
-      }
+      // function handleDeleteButtonPress() {
+      //   let listItemData = $(this).parent("td").parent("tr").data("user");
+      //   let id = listItemData.id;
+      //   $.ajax({
+      //     method: "DELETE",
+      //     url: "/api/highscores/" + id
+      //   })
+      //     .then(getUsers);
+      // }
 
 });
