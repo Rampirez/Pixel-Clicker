@@ -6,7 +6,7 @@ router.route("/")
   .get(scoreController.findAll)
   .post(scoreController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/scores/:id"
 router
   .route("/:id")
   .get(scoreController.findById)
