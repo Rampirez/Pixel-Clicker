@@ -5,7 +5,7 @@ export function Nav() {
   return (
     <nav className="navbar navbar-custom navbar-expand-lg navbar-light justify-content-between">
       <a className="navbar-brand" href="#">
-        Navbar
+        Pixel Clicker
       </a>
       <button
         className="navbar-toggler"
@@ -27,23 +27,18 @@ export function Nav() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Features
+              Game
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#">
-              Disabled
+              Leaderboard
             </a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" controls autoplay='true'>
+        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" autoplay='true' controls>
           <p>
             If you are reading this, it is because your browser does not support
             the audio element.{" "}
