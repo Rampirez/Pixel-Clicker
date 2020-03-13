@@ -1,6 +1,6 @@
 module.exports = {
-  HighScore: require("./highScore"),
-  Waifu: require("./waifu")
+  HighScore: require("./highScore")
+// Waifu: require("./waifu")
 };
 
 // "use strict";
