@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import "./style-test.css";
@@ -53,20 +54,17 @@ class Scoreboard extends Component {
                 {this.state.scoreTable.map(score => {
                   return (
                     <ListItem key={score._id}>
-                      <a href={"/highscores/" + score._id}>
+                      <Link to={"/" + score._id}>
                         <strong>
                           {score.userName} - {score.highScore}
                         </strong>
-                      </a>
+                      </Link>
                     </ListItem>
                   );
                 })}
               </List>
             ) : (
-              <h3>Current Scoreboard
-                <p>User-1</p>
-                <p>123 points</p>
-              </h3>
+              <h3>Currently Under Construction</h3>
             )}
           </Col>
         </Row>
