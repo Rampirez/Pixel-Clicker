@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+import classnames from "classnames";
 import "./style.css";
 
 class Register extends Component {
@@ -11,9 +16,26 @@ class Register extends Component {
       errors: {}
     };
   }
+
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
   onSubmit = e => {
     e.preventDefault();
     const newUser = {
@@ -22,6 +44,7 @@ class Register extends Component {
       password2: this.state.password2
     };
     console.log(newUser);
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
@@ -46,30 +69,39 @@ class Register extends Component {
               error={errors.username}
               type="text"
               id="username"
-              className="fadeIn second"
+              className={classnames("fadeIn second", {
+                invalid: errors.username
+              })}
               name="username"
               placeholder="username"
             />
+            <span className="red-text">{errors.username}</span>
             <input
               onChange={this.onChange}
               value={this.state.password}
               error={errors.password}
               type="text"
               id="password"
-              className="fadeIn third"
+              className={classnames("fadeIn third", {
+                invalid: errors.password
+              })}
               name="password"
               placeholder="password"
             />
+            <span className="red-text">{errors.password}</span>
             <input
               onChange={this.onChange}
               value={this.state.password2}
               error={errors.password2}
               type="text"
               id="password2"
-              className="fadeIn third"
+              className={classnames("fadeIn third", {
+                invalid: errors.password2
+              })}
               name="password2"
               placeholder="confirm password"
             />
+            <span className="red-text">{errors.password2}</span>
             <input type="submit" className="fadeIn fourth" value="Register" />
           </form>
         </div>
@@ -78,4 +110,18 @@ class Register extends Component {
   }
 }
 
-export default Register;
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  { registerUser }
+)(withRouter(Register));
