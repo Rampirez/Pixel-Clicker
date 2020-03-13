@@ -14,31 +14,28 @@ render() {
     const { user } = this.props.auth;
     {console.log(user);}
 return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.username}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
-              </p>
-            </h4>
-            <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
+    <div className="wrapper fadeInDown">
+    <div id="formContent">
+      <div className="fadeIn first">
+        <img
+          src="https://piskel-imgstore-b.appspot.com/img/f86d1082-5f00-11ea-95bd-2b8516267d01.gif"
+          id="icon"
+          alt="User Icon"
+        />
+      </div>
+        <h1>Howdy {user.username}!</h1>
+        <br></br>
+        <h3>This is your own, personal page!</h3>
+        <br></br>
+        <button
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-danger"
             >
               Logout
             </button>
-          </div>
-        </div>
-      </div>
+            <br></br>
+    </div>
+  </div>
     );
   }
 }
