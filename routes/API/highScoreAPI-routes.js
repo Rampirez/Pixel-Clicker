@@ -2,13 +2,13 @@ const router = require("express").Router();
 const scoreController = require("../../controllers/scoreControllers");
 
 // Matches with "/api/scores"
-router.route("/")
+router.route("/highscores")
   .get(scoreController.findAll)
   .post(scoreController.create);
 
 // Matches with "/api/scores/:id"
 router
-  .route("/:id")
+  .route("/highscores/:id")
   .get(scoreController.findById)
   .put(scoreController.update)
   .delete(scoreController.remove);
