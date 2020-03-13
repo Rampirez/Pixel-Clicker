@@ -21,24 +21,24 @@ export function Nav() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/">
               Home <span className="sr-only">(current)</span>
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item active">
             <a className="nav-link" href="#">
               Game
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item active">
             <a className="nav-link" href="#">
               Leaderboard
             </a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul className="nav navbar-nav navbar-right">
             <li>
-        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" autoplay='true' controls>
+        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" autoPlay={true} controls loop>
           <p>
             If you are reading this, it is because your browser does not support
             the audio element.{" "}
