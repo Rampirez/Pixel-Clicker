@@ -81,7 +81,7 @@ class Login extends Component {
               onChange={this.handleChange}
               value={this.state.password}
               error={this.state.errors.password}
-              type="text" //make password once done
+              type="password"
               id="password"
               className={classnames("fadeIn third", {
                 invalid: this.state.errors.password || this.state.errors.passwordincorrect

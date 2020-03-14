@@ -31,19 +31,14 @@ export function Nav() {
             </a>
           </li>
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="leaderboard">
               Leaderboard
             </a>
           </li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
             <li>
-        <audio className="" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/RoccoW/RoccoW_-_Singles/RoccoW_-_Nontinde_Vendor_Theme.mp3" autoPlay={true} controls loop>
-          <p>
-            If you are reading this, it is because your browser does not support
-            the audio element.{" "}
-          </p>
-        </audio>
+            <iframe width="100%" height="50" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/598897581&color=%23bf7e79&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </li>
         </ul>
       </div>
