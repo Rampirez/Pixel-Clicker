@@ -80,7 +80,7 @@ class Register extends Component {
               onChange={this.onChange}
               value={this.state.password}
               error={errors.password}
-              type="text"
+              type="password"
               id="password"
               className={classnames("fadeIn third", {
                 invalid: errors.password
@@ -93,7 +93,7 @@ class Register extends Component {
               onChange={this.onChange}
               value={this.state.password2}
               error={errors.password2}
-              type="text"
+              type="password"
               id="password2"
               className={classnames("fadeIn third", {
                 invalid: errors.password2

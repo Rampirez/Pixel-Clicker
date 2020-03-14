@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import Leaderboard from "./components/leaderboard";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Sky from "react-sky";
@@ -63,6 +64,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={LoginPage} />
               <Route exact path="/register" component={RegisterPage} />
+              <Route exact path="/leaderboard" component={Leaderboard} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
           </div>
