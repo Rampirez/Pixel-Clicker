@@ -7,6 +7,7 @@ import Leaderboard from "./components/leaderboard";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Sky from "react-sky";
+import Gamepage from "./pages/Gamepage";
 
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -65,6 +66,7 @@ class App extends Component {
               <Route exact path="/" component={LoginPage} />
               <Route exact path="/register" component={RegisterPage} />
               <Route exact path="/leaderboard" component={Leaderboard} />
+              <Route exact path="/gamepage" component={Gamepage} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
           </div>
