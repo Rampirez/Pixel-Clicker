@@ -38,7 +38,7 @@ export function Nav() {
         </ul>
         <ul className="nav navbar-nav navbar-right">
             <li>
-            <iframe width="100%" height="50" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/598897581&color=%23bf7e79&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <iframe width="100%" height="50" scrolling="no" frameborder="no" allow="" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/598897581&color=%23bf7e79&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </li>
         </ul>
       </div>
