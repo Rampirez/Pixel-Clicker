@@ -20,7 +20,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-sky": "^1.1.0",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
